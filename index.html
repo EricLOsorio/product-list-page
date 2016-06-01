@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+
+	<section id="header"><h1>Shopping Cart</h1></section>
+	<a href="../homepage.html" class="button">back to homepage</a>
+
+
+
+	<section id="summary">
+
+		<form>
+		<h2>Order Summary</h2>
+		<hr>
+		<label class="summary-labels">Subtotal:</label><input type="text" name="sub" value="0" readonly class="sub"><br>
+		<label class="summary-labels">Estimated Shipping:</label><input type="text" name="ship" value=0 readonly class="sub"><br>
+		<label class="summary-labels">Sales Tax:</label><input type="text" name="tax" value=0 readonly class="sub"><br>
+		<hr class="line">
+		
+		<label class="summary-labels">Estimated Total:</label><input type="text" name="total" value=0 readonly class="sub"><br>	
+
+		<label class="summary-labels">Enter Promo Code</label>
+		<input type="text" value="" name="Promo" placeholder="Enter Promo Code" class="promo">
+		<input type="button" value="Update" name="update" class="update">
+		
+		<input  type="button" value="Keep Shopping" name="keepshopping" class="button-left">
+		<input  type="button" value="Check Out" name="checkout" class="button-right"><br>
+
+		</form>
+	</section>
+
+
+
+	<section class="item-list">
+
+		<ul>
+			<li id="item">Item</li>
+			<li>Qty</li>
+			<li>Price</li>
+			<li>Coupon Code</li>
+			<li>Total</li>
+			<li>Action</li>
+		</ul>
+
+
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 1</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="add" class="button-top">
+
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">		
+		 <hr> 
+
+		</div>
+
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 2</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="remove" class="button-bottom">
+		
+		 <hr> 
+
+		</div>	
+		
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 3</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">
+
+		 <hr>
+
+		</div>
+
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 4</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">
+		 
+		 <hr>
+
+		</div>
+
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 5</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">
+		 
+		 <hr>
+
+		</div>
+
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 6</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">
+		 
+		 <hr>
+
+		</div>	
+		
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 7</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">
+		 
+		 <hr>
+
+		</div>
+
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 8</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">
+		 
+		 <hr>
+
+		</div>
+
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 9</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">
+		 
+		 <hr>
+
+		</div>
+
+		<div>
+		 <img src="http://placehold.it/250x273">
+		 <p class="description">Item 10</p><br>
+		 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 </p>
+		 <input class="qty" type="text" value="0" name="qyt" maxlength="2"> 
+
+		 <p class="price">$50</p>
+
+		 <input class="coupon" type="text" placeholder="type coupon code">
+
+		 <label class="dollars">$</label><input class="total" type="text" value="0" readonly>
+		 
+		 <input  type="button" value="Add to Cart" name="keepshopping" class="button-top">
+		 <input  type="button" value="Remove" name="removce" class="button-bottom">
+		 
+		 <hr>
+
+		</div>		
+
+	</section>
+</div>
+   </div>
+
+</body>
+</html>
