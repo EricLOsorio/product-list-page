@@ -291,9 +291,14 @@ function checkCouponDiscount(coupon){
           var computedCartItemTot=(Number(cart[j].price) * Number(cart[j].qty));
           cart[j].totalForItem=computedCartItemTot-(computedCartItemTot*0.15);
           var currentDiv=document.getElementById(cart[j].id);
-
           var itemTotal=currentDiv.querySelector(".total");
           itemTotal.value=cart[j].totalForItem;         
+        } else {
+          var computedCartItemTot=(Number(cart[j].price) * Number(cart[j].qty));
+          cart[j].totalForItem=computedCartItemTot;  
+          var currentDiv=document.getElementById(cart[j].id);
+          var itemTotal=currentDiv.querySelector(".total");
+          itemTotal.value=cart[j].totalForItem;                   
         };
       };
       updateSubTotal();
