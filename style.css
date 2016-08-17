@@ -8,14 +8,16 @@ body{
 
 .container {
 	position: absolute;
-	width: 2200px;
+	/*width: 2200px;*/
+	width:100%;
 }
 
 #header {
 	padding-top:20px;
 	margin-top: -5px;
 	position: relative;
-	width:2200px;
+	/*width:2200px;*/
+	width:100%;
 	background-color:slateblue;
 	text-align:left;
 	margin-left:0;
@@ -24,8 +26,13 @@ body{
 }
 
 #summary {
-	position:fixed;
-	width:300px;
+
+	position:absolute;
+    left:80%;
+	top:6em;
+	bottom:30em;
+	width:20%;
+	height:30em;
 	background-color:lavender;
 	border:2px solid black;
 	padding-bottom:4em;
@@ -101,15 +108,28 @@ h1 {
 .item-list {
 	position:relative;
 	background-color:skyblue;
+	margin-top:-.1em;
 	color:black;
-	width:80%;
-	left: 3.8%;
+	width:100%;
+	/*left: 3.8%;*/
 	display:block;
-
-
 
 }
 
+#shoppingCart {
+	position:relative;
+	background-color:skyblue;
+	margin-top:-.1em;
+	color:black;
+	width:100%;
+	/*left: 3.8%;*/
+	display:none;
+	float:left;
+}
+
+#shoppingCartItems{
+	width:55%;
+}
 
 ul {
 	background-color: mediumorchid;
@@ -124,18 +144,30 @@ li {
 
 }
 
-#item {
+  #item{
 
-	margin-right:27em;
+	margin-right:12em;
 }
 
-#item ~ li {
+#cartItem{
+	margin-right:16.5em;
+}
 
-	margin-right:7em;
+
+#item ~ li{
+
+	margin-left:10em;
+
+}
+
+#cartItem ~ li {
+	margin-left:4.3em;
+
 }
 
 img{
 	float:left;
+	display:block;
 }
 
 section {
@@ -155,7 +187,7 @@ section {
 
 .qty {
 	position: relative;
-	top: -18em;
+	/*top: -18em;*/
 	left:3.5em;
 	width:2em;
 	height: 2em;
@@ -163,10 +195,20 @@ section {
 
 }
 
-.price {
-	position: relative;
-	top: -15em;
-	left:11.5em;
+.priceItem {
+	position: relative;/*
+	top: -15em; */
+	left:18em;
+	height:2em;
+	display: inline-block;
+
+}
+
+
+.priceCart {
+	position: relative;/*
+	top: -15em; */
+	left:8em;
 	height:2em;
 	display: inline-block;
 
@@ -174,8 +216,8 @@ section {
 
 .coupon {
 	position: relative;
-		top: -18em;
-		left:22.5em;
+		/*top: -18em;*/
+		left:12.5em;
 		height: 2em;
 	display: inline-block;
 
@@ -183,8 +225,8 @@ section {
 
 .dollars {
 	position: relative;
-	top:-15em;
-	left:22em;
+	/*top:-15em;*/
+	left:13em;
 	height: 2em;
 	display:inline-block;
 
@@ -192,17 +234,17 @@ section {
 
 .total {
 	position: relative;
-	top: -18em;
-	left:27em;
+/*	top: -18em;*/
+	left:17em;
 	display: inline-block;
 	width:5em;
 	height: 2em;
 
 }
 
-.button-top {
+.addToCart {
 	position:relative;
-	top:-18em;
+/*	top:-18em; */
 	left:32em;
 	height:3em;
 	width:7em;
@@ -213,10 +255,14 @@ section {
 
 }
 
+.addToCart {
+	left:30em;
+}
+
 .button-bottom {
 	position:relative;
-	top:-14em;
-	left:24.7em;
+	/*top:-14em;*/
+	left:11.7em;
 	height:3em;
 	width:7em;
 	border-radius: 1em;
@@ -224,17 +270,46 @@ section {
 	background-color:white;
 	}
 
+.total + .button-top {
+	display:inline-block;
+	position:relative;
+	/*top:-14em;*/
+	top:-4em;
+
+	left:18.7em;
+	height:3em;
+	width:7em;
+	border-radius: 1em;
+	color:red;
+	background-color:white;
+	}	
+
 .promo {
 	position: relative;
 	top: -2.5em;
 	width: 15em;
 }
 
-.button {
+#toggle {
+	right:0;
+	display:block;
+	position:fixed;
+	font-weight: bold;
+	margin-top:-1.5em;
+	z-index:1;
+}
+
+
+input[value="update"]{
+	position:relative;
+    left:5em;
+}
+
+a[class="button"] {
   display: block;
   position:relative;
   top:-5em;
-  left:-135em;
+  left:-128em;
   float:right;
   margin-bottom:2%;
   width:7%;
