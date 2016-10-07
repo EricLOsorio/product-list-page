@@ -27,7 +27,7 @@ body{
 
 #header a{
 	position:fixed;
-	margin-left:300px;
+	left:300px;
 }
 
 #summary {
