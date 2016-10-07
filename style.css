@@ -25,9 +25,9 @@ body{
 
 }
 
-#header  a{
+#header a{
 	position:absolute;
-	left:300px;
+	margin-left:300px;
 }
 
 #summary {
