@@ -25,7 +25,7 @@ body{
 
 }
 
-#header > a{
+#header  a{
 	position:absolute;
 	left:300px;
 }
