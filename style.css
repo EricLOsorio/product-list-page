@@ -25,6 +25,10 @@ body{
 
 }
 
+#header a{
+	left:300px;
+}
+
 #summary {
 
 	position:absolute;
