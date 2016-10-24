@@ -114,7 +114,7 @@ inCart:false,
 },
 
 ];
-
+	
 function addItem(item){
 	var shoppingItems=document.getElementById("ShoppingCartItems");
 	var itemDiv=document.createElement('div');
@@ -154,9 +154,10 @@ function addItem(item){
     update.type="button";
     update.value="update";
     qty.className="qty";
-    qty.type="text";
+    qty.type="number";
     qty.value=item.qyt;
-    qty.maxlength="2";
+    qty.min="1"
+    qty.max="99";
     var price=document.createElement('p');
     var priceText=document.createTextNode("$"+item.price);
     price.className="priceCart";
@@ -183,7 +184,6 @@ function addItem(item){
 	itemDiv.appendChild(update);
 	itemDiv.appendChild(remove); 
 	itemDiv.appendChild(horizontal);
-
 };
 
 function objectsInCart(id,img,name,desc,qty,price,totalForItem,coupon) {
