@@ -59,7 +59,7 @@ body{
     left:80%;
 	top:6em;
 	bottom:30em;
-	width:50%;
+	width:75%;
 	height:30em;
 	background-color:lavender;
 	border:2px solid black;
@@ -382,6 +382,29 @@ a[class="button"] {
   	color:white;
   }
 
+  #cartItem{
+  	font-size:2em;
+	margin-right:2em;
+	margin-left:3em;
+  }
+
+  #cartItem ~ li{
+  	font-size:2em;
+  }
+
+  #item{
+  	font-size:2em;
+  	margin-right:2em;
+  	margin-left:4em;
+  }
+
+
+  #item ~ li{
+    font-size:2em;
+	margin-left:3em;
+
+  }
+
   .qty {
     font-size:2em;
 	width:2em;
@@ -391,8 +414,11 @@ a[class="button"] {
   }
 
   #ShoppingCartItems .qty{
-  	left:1em;
+
+  	left:0em;
+  	top:0em;
   }
+
 
   .priceItem {
 	position: relative;
@@ -400,19 +426,76 @@ a[class="button"] {
 	left:5em;
 	height:2em;
 	display: inline-block;
-}
+  }
 
-.description {
+
+  .priceCart{
+  	font-size:2em;
+  	left:9em;
+  	top:-9em;
+  }
+
+  .description {
 	font-size:1.5em;
 	width:10em;
-}
+  }
 
-.addToCart {
-  left:7em;
-  height:4em;
-  width:8em;
-  font-size:1.5em;
-}
+  #ShoppingCartItems .description{
+  	width:7em;
+  }
 
+
+  .addToCart {
+    left:7em;
+    height:4em;
+    width:8em;
+    font-size:1.5em;
+  }
+
+  #ShoppingCartItems .priceCart{
+  	left:0.5em;
+  	top:0em;
+  	font-size:2em;
+  }
+
+  .coupon{
+  	font-size:1.5em;
+  	left:1.5em;
+  }
+
+  .dollars{
+  	font-size:2em;
+  	left:1.5em;
+  }
+
+  .total{
+  	font-size:2em;
+  	left:1.5em;
+  	top:0em;
+  }
+
+  #top > .back {
+    width:25%;
+    font-size: 2em;
+    line-height: 30px;
+  }
+
+  #toggle {
+    font-size:2em;
+  }
+
+  .button-bottom{
+    left:26em;
+    font-size:1.5em;
+    bottom:0em;
+  }
+
+  .total + .button-top{
+    font-size:1.5em;
+    top:0em;
+    left:25em;
+
+
+  }
 
 }
