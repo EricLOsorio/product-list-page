@@ -287,8 +287,6 @@ section {
 	border-radius: 1em;
 	color:red;
 	background-color:white;
-
-
 }
 
 .addToCart {
@@ -383,7 +381,38 @@ a[class="button"] {
   	background-color:blue;
   	color:white;
   }
+
+  .qty {
+    font-size:2em;
+	width:2em;
+	height: 2em;
+	margin-top:-12em;
+	left:-0.5em;
+  }
+
+  #ShoppingCartItems .qty{
+  	left:1em;
+  }
+
+  .priceItem {
+	position: relative;
+	font-size:2em;
+	left:5em;
+	height:2em;
+	display: inline-block;
+}
+
+.description {
+	font-size:1.5em;
+	width:10em;
+}
+
+.addToCart {
+  left:7em;
+  height:4em;
+  width:8em;
+  font-size:1.5em;
 }
 
 
-
+}
