@@ -499,16 +499,19 @@ a[class="button"] {
   .button-left{
 	font-size:1.5em;
 	top:0em;
+	background-color:blue;
   }
 
   .button-right{
 	font-size:1.5em;
 	top:0em;
+	background-color:blue;
   }
 
   .update {
 	font-size:1.5em;
 	top:-0.5em;
+	background-color:blue;
   }
 
   #summary label{
