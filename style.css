@@ -494,8 +494,31 @@ a[class="button"] {
     font-size:1.5em;
     top:0em;
     left:25em;
+  }
 
+  .button-left{
+	font-size:1.5em;
+	top:0em;
+  }
 
+  .button-right{
+	font-size:1.5em;
+	top:0em;
+  }
+
+  .update {
+	font-size:1.5em;
+	top:-0.5em;
+  }
+
+  #summary label{
+  	font-size:1.5em;
+  }
+  
+  .promo{
+  	font-size:1.5em;
+  	width:10em;
+  	top:0em;
   }
 
 }
