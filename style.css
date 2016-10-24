@@ -382,6 +382,9 @@ a[class="button"] {
   	color:white;
   }
 
+}
+
+@media (max-device-width:360px), (max-device-width:600px){
   #cartItem{
   	font-size:2em;
 	margin-right:2em;
