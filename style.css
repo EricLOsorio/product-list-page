@@ -19,7 +19,7 @@ body{
 	/*width:2200px;*/
 	width:100%;
 	left:0px;
-	background-color:slateblue;
+	background-color:#800080;
 	text-align:left;
 	margin-left:0;
 	padding-left:0%;
@@ -59,7 +59,7 @@ body{
     left:80%;
 	top:6em;
 	bottom:30em;
-	width:75%;
+	width:50%;
 	height:30em;
 	background-color:lavender;
 	border:2px solid black;
@@ -140,7 +140,7 @@ h1 {
 
 .item-list {
 	position:relative;
-	background-color:yellow;
+	background-color:#663399;
 	margin-top:-.1em;
 	color:black;
 	width:100%;
@@ -151,7 +151,7 @@ h1 {
 
 #shoppingCart {
 	position:relative;
-	background-color:green;
+	background-color:slateblue;
 	margin-top:-.1em;
 	color:black;
 	width:100%;
@@ -287,6 +287,8 @@ section {
 	border-radius: 1em;
 	color:red;
 	background-color:white;
+
+
 }
 
 .addToCart {
@@ -363,16 +365,34 @@ a[class="button"] {
 
 
 @media (max-device-width:1024px){
-    #header{
-  	background-color:#2E6444;
+  #header{
+ 	background-color:#2E6444;
   	color:white;
   }	
+
+  .item-list{
+    background-color: #008B8B;
+  }  
+
+  #shoppingCart{
+  	background-color:#2E6444;
+  }
+
 }
 
+
 @media (max-device-width:600px){
-    #header{
+  #header{
   	background-color:teal;
   	color:white;
+  }
+
+  .item-list{
+   background-color: #90EE90;
+  }  
+
+  #shoppingCart{
+  	background-color:teal;
   }
 }
 
@@ -382,149 +402,13 @@ a[class="button"] {
   	color:white;
   }
 
-}
-
-@media (max-device-width:360px), (max-device-width:600px){
-  #cartItem{
-  	font-size:2em;
-	margin-right:2em;
-	margin-left:3em;
+  .item-list{
+   background-color: #1E90FF;
   }
 
-  #cartItem ~ li{
-  	font-size:2em;
-  }
-
-  #item{
-  	font-size:2em;
-  	margin-right:2em;
-  	margin-left:4em;
-  }
-
-
-  #item ~ li{
-    font-size:2em;
-	margin-left:3em;
-
-  }
-
-  .qty {
-    font-size:2em;
-	width:2em;
-	height: 2em;
-	margin-top:-12em;
-	left:-0.5em;
-  }
-
-  #ShoppingCartItems .qty{
-
-  	left:0em;
-  	top:0em;
-  }
-
-
-  .priceItem {
-	position: relative;
-	font-size:2em;
-	left:5em;
-	height:2em;
-	display: inline-block;
-  }
-
-
-  .priceCart{
-  	font-size:2em;
-  	left:9em;
-  	top:-9em;
-  }
-
-  .description {
-	font-size:1.5em;
-	width:10em;
-  }
-
-  #ShoppingCartItems .description{
-  	width:7em;
-  }
-
-
-  .addToCart {
-    left:7em;
-    height:4em;
-    width:8em;
-    font-size:1.5em;
-  }
-
-  #ShoppingCartItems .priceCart{
-  	left:0.5em;
-  	top:0em;
-  	font-size:2em;
-  }
-
-  .coupon{
-  	font-size:1.5em;
-  	left:1.5em;
-  }
-
-  .dollars{
-  	font-size:2em;
-  	left:1.5em;
-  }
-
-  .total{
-  	font-size:2em;
-  	left:1.5em;
-  	top:0em;
-  }
-
-  #top > .back {
-    width:25%;
-    font-size: 2em;
-    line-height: 30px;
-  }
-
-  #toggle {
-    font-size:2em;
-  }
-
-  .button-bottom{
-    left:26em;
-    font-size:1.5em;
-    bottom:0em;
-  }
-
-  .total + .button-top{
-    font-size:1.5em;
-    top:0em;
-    left:25em;
-  }
-
-  .button-left{
-	font-size:1.5em;
-	top:0em;
-	background-color:blue;
-  }
-
-  .button-right{
-	font-size:1.5em;
-	top:0em;
-	background-color:blue;
-  }
-
-  .update {
-	font-size:1.5em;
-	top:-0.5em;
-	background-color:blue;
-  }
-
-  #summary label{
-  	font-size:1.5em;
-  }
-  
-  .promo{
-  	font-size:1.5em;
-  	width:10em;
-  	top:0em;
+  #shoppingCart{
+  	background-color:blue;
   }
 
 }
+
