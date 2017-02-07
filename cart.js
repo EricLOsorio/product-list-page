@@ -11,6 +11,7 @@ var coupons=shoppingCartItems.querySelectorAll(".coupon");
 var addToCart=document.getElementsByClassName("addToCart")
 var qty=document.getElementsByClassName("qty");
 var toggle=document.getElementById("toggle");
+var keepShopping=document.querySelector(".button-left");
 var i1="#item1";
 var itemId=document.querySelector(i1+ " .addToCart");
 var item1=document.querySelector(i1 +" .qty");
@@ -114,76 +115,106 @@ inCart:false,
 },
 
 ];
-	
+
 function addItem(item){
 	var shoppingItems=document.getElementById("ShoppingCartItems");
 	var itemDiv=document.createElement('div');
 	var image=document.createElement('img');
 	var descTitle=document.createElement('p');
 	var titleText=document.createTextNode(item.name);
-    var crElement=document.createElement('br');
-    var itemDescription=document.createElement('p');
-    var descriptionText=document.createTextNode(item.description);
+  var crElement=document.createElement('br');
+  var itemDescription=document.createElement('p');
+  var descriptionText=document.createTextNode(item.description);
+  var reviewInfoDiv=document.createElement('div');
+    /**********/
     var qty=document.createElement('input');
     var update=document.createElement('input');
     var coupon=document.createElement('input');
-    var currency=document.createElement('label');
-    var currencyText=document.createTextNode("$");
+
     var total=document.createElement('input');
     var upate=document.createElement('input');
     var remove=document.createElement('input');
     var horizontal=document.createElement('hr');
+    var closeLabel=document.createElement('label');
+    var closeIcon=document.createElement('i');
+    /**************/
+    image.src=item.image;
+    descTitle.className="description";    
+    itemDescription.className="description";
+
+
+    itemDescription.appendChild(descriptionText);
+  
+    descTitle.appendChild(titleText);
+
+    itemDiv.id=item.id;
+    itemDiv.name=item.name;
+    itemDiv.className="itemDiv";
+
+    itemDiv.appendChild(image);
+    itemDiv.appendChild(descTitle);  
+    itemDiv.appendChild(itemDescription);      
+
+
+
+
+    qty.className="qty";
+    qty.type="number";
+    qty.value=item.qyt;
+    qty.setAttribute('min','1');
+    qty.setAttribute('max','100');
+
     update.type="button";
     update.value="update";
     update.className="button-top";
+
     update.name=item.name;
-    remove.type="button";
-    remove.value="Remove";
-    remove.className="button-bottom";
-    remove.name=item.name;
-    total.className="total";
-    total.type="text";
-    total.value="0";
-    total.readOnly=true;
-    currency.className="dollars";
-    currency.appendChild(currencyText);
     coupon.className="coupon";
     coupon.type="text";
     coupon.name=item.name;
     coupon.placeholder="individual item coupon code";
-    update.type="button";
-    update.value="update";
-    qty.className="qty";
-    qty.type="number";
-    qty.value=item.qyt;
-    qty.min="1"
-    qty.max="99";
+
+    remove.type="button";
+    remove.value="Remove";
+    remove.className="button-bottom";
+    remove.setAttribute('id','button-bottomID');
+    remove.name=item.name;
+
+    closeLabel.setAttribute('for','button-bottomID');
+    closeLabel.setAttribute('id','closeLabel');
+    closeIcon.className='fa fa-times fa-lg';
+    closeIcon.setAttribute('aria-hidden','true');
+    closeLabel.appendChild(closeIcon);
+
+    itemDiv.appendChild(closeLabel);
+    
+
     var price=document.createElement('p');
     var priceText=document.createTextNode("$"+item.price);
     price.className="priceCart";
     price.appendChild(priceText);
-    itemDescription.className="description";
-    itemDescription.appendChild(descriptionText);
-	descTitle.className="description";	
-	descTitle.appendChild(titleText)
-	itemDiv.className="items";
-	itemDiv.id=item.id;
-	itemDiv.name=item.name;
-	image.src=item.image;
-	itemDiv.appendChild(image);
-	shoppingItems.appendChild(itemDiv);
-	itemDiv.appendChild(descTitle);
-	itemDiv.appendChild(crElement);
-	itemDiv.appendChild(itemDescription);
-    itemDiv.appendChild(qty);
-    itemDiv.appendChild(update);
-	itemDiv.appendChild(price);
-	itemDiv.appendChild(coupon);
-	itemDiv.appendChild(currency);
-	itemDiv.appendChild(total);
-	itemDiv.appendChild(update);
-	itemDiv.appendChild(remove); 
-	itemDiv.appendChild(horizontal);
+  
+    total.className="total";
+    total.type="text";
+    total.value="0";
+    total.readOnly=true;
+
+    reviewInfoDiv.className='reviewInfo';
+
+    reviewInfoDiv.appendChild(qty);
+    reviewInfoDiv.appendChild(update);    
+  	reviewInfoDiv.appendChild(coupon);
+  	/*reviewInfoDiv.appendChild(currency);*/
+    reviewInfoDiv.appendChild(price);    
+  	reviewInfoDiv.appendChild(remove);
+    reviewInfoDiv.appendChild(total);    
+  	reviewInfoDiv.appendChild(horizontal);
+
+    itemDiv.appendChild(reviewInfoDiv);
+ 
+    shoppingItems.appendChild(itemDiv);
+    itemDiv.appendChild(crElement); 
+
 };
 
 function objectsInCart(id,img,name,desc,qty,price,totalForItem,coupon) {
@@ -218,7 +249,7 @@ var currentDiv=document.getElementById(cartObject.id);
 var qty=currentDiv.querySelector(".qty");
 var coupon=currentDiv.querySelector(".coupon");
 var itemTotal=currentDiv.querySelector(".total");
-if(coupon.value==="10OffOneOnly"){
+if(coupon.value==="10PercentOffOneOnly"){
  var undiscountedTotal=0;
 
  var currentDiscountTotal=0;
@@ -238,7 +269,7 @@ if(proposedDiscTotal<currentDiscountTotal){
     cart[i].totalForItem=Number(cart[i].price)*Number(cart[i].qty);
 };
    cartObject.totalForItem=proposedDiscount;
-   itemTotal.value=proposedDiscount;
+   itemTotal.value='$'+proposedDiscount;
    updateSubTotal();
 
 };
@@ -264,7 +295,7 @@ function checkCouponDiscount(coupon){
        for(var i=0;i<cart.length;i++){
        singleTotal=(Number(cart[i].price) * Number(cart[i].qty));
         undiscountedTotal=undiscountedTotal+singleTotal;
-       if(coupon==="15OffAllOdds"){        
+       if(coupon==="15PercentOffAllOdds"){        
         currentDiscountTotal=currentDiscountTotal+(cart[i]).totalForItem;
 
          if(Number(cart[i].id)%2!==0){
@@ -272,7 +303,7 @@ function checkCouponDiscount(coupon){
           proposedDiscount=proposedDiscount+singleTotal-(singleTotal*0.15);
 
          };
-       } else if(coupon==="5OffWholeOrder"){;
+       } else if(coupon==="5PercentOffWholeOrder"){;
             undiscountedItemTotal=undiscountedItemTotal+singleTotal;
             proposedDiscount=proposedDiscount+singleTotal-(singleTotal*0.05);
           };
@@ -280,36 +311,47 @@ function checkCouponDiscount(coupon){
     
        var subTotalNow=updateSubTotal(); 
 
-       if(coupon==="15OffAllOdds"){
+       if(coupon==="15PercentOffAllOdds"){
          var proposedDiscTotal=undiscountedTotal-undiscountedItemTotal+proposedDiscount; 
        } else proposedDiscTotal=undiscountedTotal -(undiscountedTotal*0.05);
      
      
-    if(proposedDiscTotal<subTotalNow && coupon==="15OffAllOdds"){
+    if(proposedDiscTotal<subTotalNow && coupon==="15PercentOffAllOdds"){
       for(var j=0;j<cart.length;j++){
         if(Number(cart[j].id)%2!==0){
           var computedCartItemTot=(Number(cart[j].price) * Number(cart[j].qty));
           cart[j].totalForItem=computedCartItemTot-(computedCartItemTot*0.15);
           var currentDiv=document.getElementById(cart[j].id);
           var itemTotal=currentDiv.querySelector(".total");
-          itemTotal.value=cart[j].totalForItem;         
+          itemTotal.value='$'+cart[j].totalForItem;         
         } else {
           var computedCartItemTot=(Number(cart[j].price) * Number(cart[j].qty));
           cart[j].totalForItem=computedCartItemTot;  
           var currentDiv=document.getElementById(cart[j].id);
           var itemTotal=currentDiv.querySelector(".total");
-          itemTotal.value=cart[j].totalForItem;                   
+          itemTotal.value='$'+cart[j].totalForItem;                   
         };
       };
       updateSubTotal();
-    } else if(proposedDiscTotal<subTotalNow && coupon==="5OffWholeOrder"){
+    } else if(proposedDiscTotal<subTotalNow && coupon==="5PercentOffWholeOrder"){
         for(var j=0;j<cart.length;j++){
 
-            cart[j].totalForItem=cart[j].totalForItem-(cart[j].totalForItem*0.05);
-            var currentDiv=document.getElementById(cart[j].id);
+          
+          cart[j].totalForItem=cart[j].totalForItem-(cart[j].totalForItem*0.05);
+          var currentDiv=document.getElementById(cart[j].id);
+          var itemTotal=currentDiv.querySelector(".total");
+          itemTotal.value='$'+cart[j].totalForItem;               
 
+
+          if(Number(cart[j].id)%2!==0){
+            var computedCartItemTot=(Number(cart[j].price) * Number(cart[j].qty));
+            cart[j].totalForItem=computedCartItemTot;
+            cart[j].totalForItem=Number(computedCartItemTot)-Number(computedCartItemTot)*0.05;
+            var currentDiv=document.getElementById(cart[j].id);
             var itemTotal=currentDiv.querySelector(".total");
-            itemTotal.value=cart[j].totalForItem;         
+            itemTotal.value='$'+cart[j].totalForItem;            
+          } 
+
 
         };
 
@@ -335,7 +377,7 @@ function getSingleDiscounts(cartObj){
 
     var itemPrice=cartObj.totalForItem;
     var discountedTotal=itemPrice;
-      if(cartObj.coupon==="10OffOneOnly"){
+      if(cartObj.coupon==="10PercentOffOneOnly"){
          discountedTotal=itemPrice-(itemPrice*0.10);
 
 
@@ -351,8 +393,8 @@ function updateSubTotal(){
      for(var i=0;i<cart.length;i++){
       subTotal=subTotal+Number(cart[i].totalForItem);
      };
-     subTotalOut.value=subTotal;
-     totalOut.value=subTotal+calculateTax(subTotal)+calculateShipping(subTotal);
+     subTotalOut.value='$'+subTotal;
+     totalOut.value='$'+(subTotal+calculateTax(subTotal)+calculateShipping(subTotal));
      return subTotal;
 };
 
@@ -378,7 +420,7 @@ var subTotal=0;
     var individualTotal=Number(items.qty)*Number(items.price);
    items.totalForItem=individualTotal;
 
-    itemTotal.value=individualTotal;
+    itemTotal.value='$'+individualTotal;
 
 
       if(qty=="0"){
@@ -412,7 +454,6 @@ itemSection.addEventListener("click", function(event){
 	if(!shoppingCart.style.display ||
 		shoppingCart.style.display==="none"){
 		shoppingCart.style.display="block";
-	(document.getElementById("shoppingCart")).scrollIntoView(true);
 	}; 
 
    if(items[i].inCart==false){
@@ -424,8 +465,11 @@ itemSection.addEventListener("click", function(event){
    	 addItem(items[i]); var index=(cart.length)-1; 
      updateItemTotals(cart[index]);
 
-   	 (document.getElementById("shoppingCart")).scrollIntoView(true);
-   } else (document.getElementById("shoppingCart")).scrollIntoView(true);
+     (document.getElementById("shoppingCart")).scrollIntoView(true);  
+
+   } else {
+      (document.getElementById("shoppingCart")).scrollIntoView(true);
+   }
 
 }
    event.stopPropagation();
@@ -482,10 +526,11 @@ summary.addEventListener("click", function(event){
    var summaryCoupon=summary.querySelector(".promo");
    var clickedItem="";
   if (event.target.value === "Update") { //IF Update BUTTON CLICKED
-         clickedItem = event.target.name; 
-    if(summaryCoupon.value==="15OffAllOdds"){
+         clickedItem = event.target.name;
+         document.querySelector('.coupon').value=""; 
+    if(summaryCoupon.value==="15PercentOffAllOdds"){
            checkCouponDiscount(summaryCoupon.value);
-    } else if(summaryCoupon.value==="5OffWholeOrder"){
+    } else if(summaryCoupon.value==="5PercentOffWholeOrder"){
            checkCouponDiscount(summaryCoupon.value);
     }
    
@@ -501,14 +546,19 @@ summary.addEventListener("click", function(event){
 
 toggle.addEventListener("click",function(event){
   if(shoppingCart.style.display==="block") {
-  	shoppingCart.style.display="none"
+  	shoppingCart.style.display="none";
+
   } else {
     shoppingCart.style.display="block";
+
     (document.getElementById("shoppingCart")).scrollIntoView(true);
   }
 });
 
+keepShopping.addEventListener('click',function(event){
+    shoppingCart.style.display="none";
 
+});
 
 
 
