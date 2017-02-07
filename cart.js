@@ -126,37 +126,27 @@ function addItem(item){
   var itemDescription=document.createElement('p');
   var descriptionText=document.createTextNode(item.description);
   var reviewInfoDiv=document.createElement('div');
-    /**********/
-    var qty=document.createElement('input');
-    var update=document.createElement('input');
-    var coupon=document.createElement('input');
+  var qty=document.createElement('input');
+  var update=document.createElement('input');
+  var coupon=document.createElement('input');
+  var total=document.createElement('input');
+  var upate=document.createElement('input');
+  var remove=document.createElement('input');
+  var horizontal=document.createElement('hr');
+  var closeLabel=document.createElement('label');
+  var closeIcon=document.createElement('i');
 
-    var total=document.createElement('input');
-    var upate=document.createElement('input');
-    var remove=document.createElement('input');
-    var horizontal=document.createElement('hr');
-    var closeLabel=document.createElement('label');
-    var closeIcon=document.createElement('i');
-    /**************/
     image.src=item.image;
     descTitle.className="description";    
     itemDescription.className="description";
-
-
     itemDescription.appendChild(descriptionText);
-  
     descTitle.appendChild(titleText);
-
     itemDiv.id=item.id;
     itemDiv.name=item.name;
     itemDiv.className="itemDiv";
-
     itemDiv.appendChild(image);
     itemDiv.appendChild(descTitle);  
     itemDiv.appendChild(itemDescription);      
-
-
-
 
     qty.className="qty";
     qty.type="number";
@@ -167,19 +157,16 @@ function addItem(item){
     update.type="button";
     update.value="update";
     update.className="button-top";
-
     update.name=item.name;
     coupon.className="coupon";
     coupon.type="text";
     coupon.name=item.name;
     coupon.placeholder="individual item coupon code";
-
     remove.type="button";
     remove.value="Remove";
     remove.className="button-bottom";
     remove.setAttribute('id','button-bottomID');
     remove.name=item.name;
-
     closeLabel.setAttribute('for','button-bottomID');
     closeLabel.setAttribute('id','closeLabel');
     closeIcon.className='fa fa-times fa-lg';
@@ -193,18 +180,14 @@ function addItem(item){
     var priceText=document.createTextNode("$"+item.price);
     price.className="priceCart";
     price.appendChild(priceText);
-  
     total.className="total";
     total.type="text";
     total.value="0";
     total.readOnly=true;
-
     reviewInfoDiv.className='reviewInfo';
-
     reviewInfoDiv.appendChild(qty);
     reviewInfoDiv.appendChild(update);    
   	reviewInfoDiv.appendChild(coupon);
-  	/*reviewInfoDiv.appendChild(currency);*/
     reviewInfoDiv.appendChild(price);    
   	reviewInfoDiv.appendChild(remove);
     reviewInfoDiv.appendChild(total);    
@@ -559,7 +542,6 @@ keepShopping.addEventListener('click',function(event){
     shoppingCart.style.display="none";
 
 });
-
 
 
 });

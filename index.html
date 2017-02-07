@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Item List with Shopping Cart</title>
+	<title>Item List/Shopping Cart</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -22,13 +22,13 @@
       </ul>
 	</header>
 
-	<button id="toggle">Go To Shopping Cart</button>
+	<button id="toggle">Toggle Shopping Cart</button>
      
 
     <section id="itemList">
  
 		<section class="item-list">
-	     <h2>Items List</h2>	
+	     <h2>Item List</h2>	
 
 
 			<div class="items" id="item1">
@@ -37,7 +37,7 @@
 			 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 			 </p>
 
-	         <div class="howMany">
+	         <!--div class="howMany"-->
 
 			 <p class="priceItem">$50</p>
 
@@ -45,7 +45,7 @@
 
 			 <input  type="button" value="Add to Cart" name="item1" class="addToCart" >
 
-			 </div>
+			 <!--/div-->
 		
 
 			</div>
@@ -206,7 +206,6 @@
 		<p><strong>Individual Item Promo Code</strong>:10PercentOffOneOnly</p>
 		<p>Order Summary</p>
 
-		<hr>
 		<label class="summary-labels">Subtotal:</label><input type="text" name="sub" value="0" readonly class="sub" id="subTotal"><br>
 		<label class="summary-labels">Shipping:</label><input type="text" name="ship" value=0 readonly class="sub" id="ship"><br>
 		<label class="summary-labels">Sales Tax:</label><input type="text" name="tax" value=0 readonly class="sub" id="tax"><br>
@@ -224,6 +223,7 @@
 		</form>    
     </section>
 	</section>
+
 
 <script type="text/javascript" src="cart.js"></script>
 </body>

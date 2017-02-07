@@ -13,6 +13,23 @@ body{
 
 }
 
+#toggle {
+	right:0;
+	display:block;
+	position:fixed;
+    height:3em;
+	width:9em;
+	border-radius: 1em;
+	font-weight: bold;
+	margin-top:-9em;
+	z-index:301;
+}
+
+
+section {
+	margin: 0 auto;
+}
+
 header {
   position: relative;
   width:100%;
@@ -55,7 +72,7 @@ h2 {
 
 
 .items{
-  position:relative;
+
   display:inline-block;
   width:250px;
   height:26em;
@@ -70,92 +87,8 @@ h2 {
 }
 
 
-#summary {
-    font-family:sans-serif;
-	position:static;
-    left:80%;
-	margin-top:1em;
-	margin-bottom:3em;
-	bottom:30em;
-	width:17em;
-	height:38em;
-	background-color:white;
-	padding-bottom:4em;
-    box-shadow:0 3px 4px 3px gray;
-}
-
-#summary p:nth-of-type(1), #summary p:nth-of-type(2){
-	font-size:1em;
-}
-
-#summary p:nth-of-type(3){
-	position:relative;
-	top:1em;
-	bottom:1em;
-	font-size:2em;
-}
-
-
-#summary > h2 {
-
-	padding-bottom:2em;
-}
-
-.sub {
-	clear:both;
-	display: inline-block;
-	position:relative;
-	float:right;
-	text-align:left;
-	font-size:medium;
-	width:3em;
-	margin-top:-2px;
-	margin-bottom:2em;
-	background-color:white;
-	border-color:transparent;
-}
-
-.summary-labels {
-	font-size: large;
-	display: inline-block;
-	margin-bottom:2em;
-}
-
-
-.line {
-	margin-left:2em;
-}
-
-.button-left{
-	clear:both;
-	float:left;
-	position: relative;
-	top:2em;
-	height:3em;
-	border-radius: 1em;
-	margin-bottom:2em;
-	color:white;
-	background-color:darkslateblue;
-}
-
-.button-right{
-	position:relative;
-	top:2em;
-	height:3em;
-	border-radius: 1em;
-	float:right;
-	color:white;
-	background-color:darkslateblue;
-}
-
-.update {
-	position: relative;
-	top:-3em;
-	height:3em;
-	border-radius: 1em;
-	float:right;
-	color:white;
-	background-color:darkslateblue;
+.items p:nth-of-type(1){
+    font-weight:bold;
 }
 
 #itemList{
@@ -172,8 +105,6 @@ h2 {
 	margin-top:5em;
 	color:black;
 	width:100%;
-	max-height:100%;
-
 }
 
 .item-list > h2{
@@ -182,6 +113,41 @@ h2 {
   margin-bottom:2em;
 }
 
+.item-list .description {
+
+	position: relative;
+	margin-top: -1em;
+	border:1px solid white;
+	display:inline-block;
+	width:16em;
+}
+
+.qty {
+	position: relative;
+	left:1.5em;
+	top:5px;
+	width:2.9em;
+	height: 1em;
+}
+
+.priceItem {
+	position: relative;
+	top: 5px; 
+	left:7em;
+	height:2em;
+	display: inline-block;
+    font-weight:bold;
+}
+
+.addToCart {
+	position:relative;
+	left:6em;
+	height:3em;
+	width:7em;
+	border-radius: 1em;
+	color:red;
+	background-color:white;
+}
 
 #shoppingCart {
 	position:relative;
@@ -225,8 +191,7 @@ h2 {
 	position:relative;
 	width:9em;
 	height:9em;
-	margin-bottom:2em;
-
+	margin-top:-3em;
 }
 
 .itemDiv{
@@ -238,7 +203,7 @@ h2 {
 
 .reviewInfo{
 	display:block;
-	margin-top:2em;
+	margin-top:-3em;
 }
 
 .reviewInfo .qty{
@@ -246,19 +211,36 @@ h2 {
 	font-size:1.1em;
 }
 
-.reviewInfo .button-top{
+.reviewInfo .coupon {
+	position: relative;
+		left:-11em;
+		top:3.5em;
+		height: 2em;
+	display: inline-block;
+
+}
+
+.reviewInfo .button-top {
+	display:inline-block;
 	position:relative;
-	margin-left:-4em;
-	margin-right:5em;
-}
+	top:0em;
+	left:0.5em;
+	height:3em;
+	width:7em;
+	border-radius: 1em;
+	color:red;
+	background-color:white;
+}	
 
-.reviewInfo .coupon{
-	top:3.5em;
-	left:-12em;
-}
-
-.reviewInfo .button-bottom{
-	left:-12em;
+.reviewInfo .button-bottom {
+	display:none;
+	position:relative;
+	left:0em;
+	height:3em;
+	width:7em;
+	border-radius: 1em;
+	color:red;
+	background-color:white;
 }
 
 .reviewInfo .priceCart{
@@ -268,10 +250,17 @@ h2 {
 }
 
 .reviewInfo .total{
+	position:relative;
 	margin-left:0em;
 	top:-6.25em;
 	font-size:1.05em;
+	left:14em;
+	display: inline-block;
+	width:5em;
+	height: 2em;
+	border-color:transparent;
 }
+
 
 .reviewInfo hr{
 	position:relative;
@@ -279,91 +268,75 @@ h2 {
 	bottom:3em;
 }
 
-#inCart:hover{
-	transform:scale(1);
-}
 
-
-  #item{
-
-	margin-right:12em;
-}
-
-#cartItem{
-	margin-right:16.5em;
-}
-
-
-#item ~ li{
-
-	margin-left:5em;
-
-}
-
-#cartItem ~ li {
-	margin-left:2.3em;
-
-}
-
-img{
-	float:left;
-	display:block;
-}
-
-section {
-	margin: 0 auto;
-}
-
-.description {
-
-	position: relative;
-	margin-top: -1em;
-	border:1px solid white;
-	display:inline-block;
-	width:16em;
-}
-
-.items p:nth-of-type(1){
-    font-weight:bold;
-}
-
-.qty {
-	position: relative;
-	left:1.5em;
-	top:5px;
-	width:2.9em;
-	height: 1em;
-}
-
-.addToCart {
-	position:relative;
-	left:6em;
-	height:3em;
-	width:7em;
-	border-radius: 1em;
-	color:red;
+#summary {
+    font-family:sans-serif;
+	position:static;
+    left:80%;
+	margin-top:1em;
+	margin-bottom:3em;
+	bottom:30em;
+	width:25em;
+	height:40em;
 	background-color:white;
+	padding-bottom:4em;
+	padding-right:1em;
+    box-shadow:0 3px 4px 3px gray;
 }
 
-.addToCart:hover, input.qty:hover,
-#toggle,.button-top,#closeLabel,
-.coupon,.update,.button-left,.button-right,
-.promo{
-    cursor:pointer;
+#summary label{
+	margin-left:2em;
 }
 
-.howMany{
-  position:relative;
-  left:-2em;
+#summary p{
+	margin-left:2em;
 }
 
-.priceItem {
-	position: relative;
-	top: 5px; 
-	left:7em;
-	height:2em;
+#summary p:nth-of-type(1), #summary p:nth-of-type(2){
+	font-size:1em;
+}
+
+#summary p:nth-of-type(3){
+	position:relative;
+	top:1em;
+	margin-left:1em;
+	margin-bottom:3em;
+	font-size:2em;
+}
+
+
+#summary > h2 {
+
+	padding-bottom:2em;
+}
+
+#summary label:nth-of-type(5){
+	margin-left:2em;
+}
+
+.sub {
+	clear:both;
 	display: inline-block;
-    font-weight:bold;
+	position:relative;
+	float:right;
+	text-align:left;
+	font-size:medium;
+	width:3em;
+	margin-top:-2px;
+	margin-bottom:2em;
+	background-color:white;
+	border-color:transparent;
+}
+
+.summary-labels {
+	font-size: large;
+	display: inline-block;
+	margin-bottom:2em;
+}
+
+
+.line {
+	margin-left:2em;
 }
 
 
@@ -375,85 +348,57 @@ section {
 
 }
 
-.coupon {
-	position: relative;
-		left:6em;
-		height: 2em;
-	display: inline-block;
-
-}
-
-.dollars {
-	position: relative;
-	left:11.5em;
-	height: 2em;
-	display:inline-block;
-
-}
-
-.total {
-	position: relative;
-	left:14em;
-	display: inline-block;
-	width:5em;
-	height: 2em;
-	border-color:transparent;
-
-}
-
-
-.button-bottom {
-	display:none;
-	position:relative;
-	left:5.5em;
-	height:3em;
-	width:7em;
-	border-radius: 1em;
-	color:red;
-	background-color:white;
-	}
-
-.button-top {
-	display:inline-block;
-	position:relative;
-	top:0em;
-	left:-5.5em;
-	height:3em;
-	width:7em;
-	border-radius: 1em;
-	color:red;
-	background-color:white;
-	}	
 
 .promo {
 	position: relative;
 	top: -2.5em;
 	width: 15em;
+	left:3em;
 }
 
-#toggle {
-	right:0;
-	display:block;
-	position:fixed;
-    height:3em;
-	width:9em;
-	border-radius: 1em;
-	font-weight: bold;
-	margin-top:-9em;
-	z-index:301;
-}
 
 #closeLabel{
 	position:relative;
 	left:19em;
-	top:-14em;
+	top:-19em;
 }
 
+.button-left{
+	clear:both;
+	float:left;
+	position: relative;
+	top:2em;
+	height:3em;
+	border-radius: 1em;
+	margin-bottom:2em;
+	color:white;
+	background-color:darkslateblue;
+}
 
-input[value="update"]{
+.button-right{
 	position:relative;
-    left:5em;
+	top:2em;
+	height:3em;
+	border-radius: 1em;
+	float:right;
+	color:white;
+	background-color:darkslateblue;
 }
+
+
+.update {
+	position: relative;
+	top:-3em;
+	height:3em;
+	left:0em;
+	padding-left:1em;
+	padding-right:1em;
+	border-radius: 1em;
+	float:right;
+	color:white;
+	background-color:darkslateblue;
+}
+
 
 a[class="button"] {
   display: block;
@@ -495,6 +440,17 @@ a[class="button"] {
   	margin-right:1em;
   }
 
+    #ShoppingCartItems h2{
+      position:relative;
+	  left: -1em;
+}
+
+	.itemDiv{
+	  position:relative;
+	  left:0em;
+	}
+
+
 
 }
 
@@ -504,6 +460,7 @@ a[class="button"] {
   	height:10em;
   	background-color:teal;
   	color:white;
+  	width:100vw;
   }
 
   header h2{
@@ -521,6 +478,22 @@ a[class="button"] {
   	margin-right:1em;
   }
 
+  #toggle{
+  	margin-top:-11em;
+  	left:17em;
+  }
+
+  #shoppingCart{
+  	width:90%;
+  	margin-left:0em;
+  }
+  #summary{
+  	left:0;
+  }
+
+  #ShoppingCartItems h2{
+	margin-left: 3em;
+}
 
 }
 
@@ -530,6 +503,7 @@ a[class="button"] {
   header{
   	background-color:blue;
   	color:white;
+  	width:100vw;  	
   }
 
   header h2{
@@ -543,7 +517,30 @@ a[class="button"] {
 
   #toggle{
   	margin-top:-9em;
+  	left:15em;
   }
+
+
+  #shoppingCart{
+  	width:40%;
+  	margin-left:0em;
+  }
+
+  #closeLabel{
+	left:17em;
+}
+
+
+  #summary{
+  	left:0;
+  	width:100vw;
+  }
+
+  #ShoppingCartItems h2{
+	margin-left: 3em;
+	width:10em;
+}
+
 
 }
 
